@@ -16,7 +16,7 @@ class App{
     }
 
     routes(){
-
+        require('./app/routes')(this.express);
     }
 }
 
