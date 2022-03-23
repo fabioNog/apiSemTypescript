@@ -7,6 +7,14 @@ class MainController{
             mensagem: 'tudo ok com a API'
         })
     }
+
+
+    testeId(req,res){
+        let id = req.params.id;
+        return res.json({
+            id: id
+        });    
+    }
 }
 
 
