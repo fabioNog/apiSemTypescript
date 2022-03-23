@@ -9,5 +9,12 @@ describe('testando rota principal', () => {
         expect(response.body).toHaveProperty('status');
         expect(response.body).toHaveProperty('mensagem');
 
+    });
+
+    it('deve recuperar o id de um usuario a partir da rota /teste/:id', async () => {
+        const response = await supertest(app).get('/test/1000');
+        console.log(response.body);
+        expect(response.body).toHaveProperty('id');
+        expect(response.body.id).toBe('1000');
     })
 })
