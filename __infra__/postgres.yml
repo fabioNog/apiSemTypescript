@@ -4,18 +4,18 @@ services:
   db_prod:
     image: postgres
     restart: always
-    enviroment:
+    environment:
       POSTGRES_USER: prod
       POSTGRES_DB: proddb
       POSTGRES_PASSWORD: prod
     ports:
-      -5432:5432
+      - 5432:5432
   db_test:
     image: postgres
     restart: always
-    enviroment:
+    environment:
       POSTGRES_USER: test
       POSTGRES_DB: test
       POSTGRES_PASSWORD: test
     ports:
-      -5433:5432
+      - 5433:5432
